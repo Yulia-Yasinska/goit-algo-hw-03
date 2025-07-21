@@ -3,7 +3,7 @@ import random
 def get_numbers_ticket(min, max, quantity):
     if min < 1 or max > 1000 or quantity <= 0 or max < min or quantity > max - min:
         print("Введіть коректні min, max та quantity!")
-        return None
+        return []
     lottery_list = random.sample(range(min, max + 1), quantity)
     return sorted(lottery_list)
 
